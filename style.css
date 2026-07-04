@@ -74,6 +74,7 @@ h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; margin:0; letter-
 
 /* ---------- Section helpers ---------- */
 .section{ padding:100px 0; position:relative; }
+@media (max-width:768px){ .section{ padding:60px 0; } }
 .section-eyebrow{
   font-family:var(--font-utility);
   font-size:13px;
@@ -331,6 +332,9 @@ h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; margin:0; letter-
   .course-card-side{ border-left:none; border-top:1px solid var(--border); }
   .course-card-main, .course-card-side{ padding:34px 26px; }
 }
+@media (max-width:480px){
+  .course-card-main, .course-card-side{ padding:24px 20px; }
+}
 
 /* ============================================
    ABOUT
@@ -413,7 +417,11 @@ h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; margin:0; letter-
 .form-success{ display:none; text-align:center; color:var(--teal); font-family:var(--font-utility); font-size:14px; margin:0; }
 .form-success.show{ display:block; }
 
-@media (max-width:900px){ .enquiry-grid{ grid-template-columns:1fr; } }
+@media (max-width:900px){ .enquiry-grid{ grid-template-columns:1fr; gap: 40px; } }
+@media (max-width:640px){
+  .enquiry-form { padding: 24px; }
+  .direct-item { max-width: 100%; white-space: normal; overflow-wrap: break-word; }
+}
 
 /* ============================================
    CONTACT / MAP
@@ -435,7 +443,8 @@ h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; margin:0; letter-
 .map-wrap{
   min-height:340px; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border);
 }
-@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; gap: 40px; } }
+@media (max-width:640px){ .contact-card{ padding: 24px; } }
 
 /* ============================================
    FOOTER
